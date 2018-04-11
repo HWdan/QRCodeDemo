@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xGc-mf-T3s">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--识别图片二维码-->
+        <scene sceneID="YCs-Ix-gDT">
+            <objects>
+                <viewController title="识别图片二维码" id="xGc-mf-T3s" customClass="RecognitionQRCodeVC" customModule="二维码综合案例" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C9R-NE-ueQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erweima.png" translatesAutoresizingMaskIntoConstraints="NO" id="w3s-ed-mBM">
+                                <rect key="frame" x="108" y="70" width="159" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="uJi-D2-3Dp"/>
+                                    <constraint firstAttribute="height" constant="150" id="wKD-Au-3DP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-8I-DOf">
+                                <rect key="frame" x="156" y="300" width="62" height="30"/>
+                                <state key="normal" title="开始识别"/>
+                                <connections>
+                                    <action selector="recognitionQRCode" destination="xGc-mf-T3s" eventType="touchUpInside" id="dnW-Ze-UdK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w3s-ed-mBM" firstAttribute="top" secondItem="KP5-18-HqR" secondAttribute="top" constant="50" id="0lA-eV-vNQ"/>
+                            <constraint firstItem="w3s-ed-mBM" firstAttribute="centerX" secondItem="C9R-NE-ueQ" secondAttribute="centerX" id="XXU-E5-uYl"/>
+                            <constraint firstItem="g3d-8I-DOf" firstAttribute="centerX" secondItem="C9R-NE-ueQ" secondAttribute="centerX" id="osZ-VQ-fB0"/>
+                            <constraint firstItem="g3d-8I-DOf" firstAttribute="top" secondItem="w3s-ed-mBM" secondAttribute="bottom" constant="80" id="rHK-kE-CMM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KP5-18-HqR"/>
+                    </view>
+                    <connections>
+                        <outlet property="sourceImageView" destination="w3s-ed-mBM" id="v1y-ww-Jo1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE1-2Q-VwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-92.203898050974516"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="erweima.png" width="1036" height="552"/>
+    </resources>
+</document>

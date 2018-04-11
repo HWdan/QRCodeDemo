@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Su-Wo-hu5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--生成二维码-->
+        <scene sceneID="7wp-n6-RFJ">
+            <objects>
+                <viewController title="生成二维码" id="4Su-Wo-hu5" customClass="GenerationQRCodeVC" customModule="二维码综合案例" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nv1-2U-2Ww">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Th-PK-mdL">
+                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5sG-jG-VY8"/>
+                                    <constraint firstAttribute="height" constant="200" id="txx-NE-NEe"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-Tb-idi">
+                                <rect key="frame" x="87.5" y="350" width="200" height="120"/>
+                                <color key="backgroundColor" red="0.98575680513455721" green="0.53547795632612782" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="31H-pW-ZgS"/>
+                                    <constraint firstAttribute="height" constant="120" id="a4s-aG-ZSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Th-PK-mdL" firstAttribute="centerX" secondItem="Nv1-2U-2Ww" secondAttribute="centerX" id="32s-8h-CZ9"/>
+                            <constraint firstItem="ZEE-Tb-idi" firstAttribute="centerX" secondItem="Nv1-2U-2Ww" secondAttribute="centerX" id="ArA-Do-5gZ"/>
+                            <constraint firstItem="0Th-PK-mdL" firstAttribute="top" secondItem="uPI-VA-QAp" secondAttribute="top" constant="100" id="Seq-8v-iZF"/>
+                            <constraint firstItem="ZEE-Tb-idi" firstAttribute="top" secondItem="0Th-PK-mdL" secondAttribute="bottom" constant="30" id="qYd-zu-PRZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uPI-VA-QAp"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="ZEE-Tb-idi" id="XRG-du-uMI"/>
+                        <outlet property="qrCodeImageView" destination="0Th-PK-mdL" id="KSQ-fi-ICL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xF-JB-mQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-780"/>
+        </scene>
+    </scenes>
+</document>
